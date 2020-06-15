@@ -1,0 +1,83 @@
+/* FONTS */
+/* font-family: 'Roboto', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: rgb(45, 49, 63);
+  min-height: 100vh;
+  font-size: 3rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 94%;
+  border-radius: 20px;
+  background-color: #555;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.result {
+  flex-basis: 120px;
+  padding: 20px;
+}
+
+.result .display {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  height: 100%;
+}
+
+.panel {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #777;
+  flex-grow: 1;
+}
+
+.panel .btn {
+  /* children properties - letters and numbers */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* contener properties - buttons*/
+  flex-basis: 21%;
+  height: 15%;
+  border-radius: 10px;
+  background-color: #ccc;
+  text-align: center;
+}
+
+.panel .btn:nth-child(4n) {
+  /* background-color: orange; */
+  background-color: #999;
+}
+
+.panel .btn:last-child {
+  flex-grow: 1;
+  background-color: #66CC33;
+  font-size: 4rem;
+}
