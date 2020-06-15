@@ -33,9 +33,13 @@ body {
   overflow: hidden;
 }
 
+.result,
+.panel {
+  padding: 18px;
+}
+
 .result {
-  flex-basis: 120px;
-  padding: 20px;
+  flex-basis: 90px;
 }
 
 .result .display {
@@ -53,7 +57,6 @@ body {
   justify-content: space-between;
   align-content: space-between;
   flex-wrap: wrap;
-  padding: 20px;
   background-color: #777;
   flex-grow: 1;
 }
@@ -72,7 +75,6 @@ body {
 }
 
 .panel .btn:nth-child(4n) {
-  /* background-color: orange; */
   background-color: #999;
 }
 
@@ -80,4 +82,69 @@ body {
   flex-grow: 1;
   background-color: #66CC33;
   font-size: 4rem;
+}
+
+@media (orientation: landscape) {
+  .wrap {
+    width: 66%;
+    height: 90%;
+  }
+
+  .result,
+  .panel {
+    padding: 16px;
+  }
+
+  body {
+    font-size: 2.4rem;
+  }
+
+  .panel .btn:last-child {
+    font-size: 3rem;
+  }
+}
+
+/* Settings for Ipads */
+/*without min-height property, it also applied to pixel 2 (font size was to big for pixel 2) in here*/
+@media (min-width: 768px) and (min-height: 450px) {
+  .wrap {
+    height: 80%;
+    max-height: 650px;
+    max-width: 400px;
+  }
+
+  .panel,
+  .result {
+    padding: 26px;
+  }
+
+  .result {
+    flex-basis: 140px;
+  }
+
+  body {
+    font-size: 3.8rem;
+  }
+
+  .panel .btn:last-child {
+    font-size: 6rem;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1025px) {
+
+  /* HOVER */
+  .panel .btn:hover {
+    background-color: #ddd;
+    cursor: pointer;
+  }
+
+  .panel .btn:nth-child(4n):hover {
+    background-color: #aaa;
+  }
+
+  .panel .btn:last-child:hover {
+    background-color: #77DD44;
+  }
 }
